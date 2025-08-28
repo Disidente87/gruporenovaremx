@@ -1,147 +1,99 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { Building2, Home, Store, Building, Hammer, Palette, Wrench } from 'lucide-react'
+import { Hammer, TrendingUp, Users } from "lucide-react"
+import { Card, CardContent } from "./ui/card"
+import { Button } from "./ui/button"
 
-function ServicesSection() {
+export function ServicesSection() {
   const services = [
     {
-      icon: Home,
-      title: 'Casas Residenciales',
-      description: 'Renovamos casas unifamiliares y dúplex para maximizar su valor de mercado.',
-      features: ['Cocinas modernas', 'Baños renovados', 'Espacios abiertos', 'Iluminación LED'],
-      color: 'text-real-estate-600'
+      icon: Hammer,
+      title: "Renovación Integral",
+      description: "Transformamos completamente las propiedades con renovaciones de alta calidad y diseño moderno.",
+      features: ["Diseño arquitectónico", "Renovación completa", "Supervisión profesional"],
+      color: "secondary"
     },
     {
-      icon: Building,
-      title: 'Departamentos',
-      description: 'Transformamos apartamentos en espacios modernos y funcionales.',
-      features: ['Diseño funcional', 'Almacenamiento inteligente', 'Acabados premium', 'Eficiencia energética'],
-      color: 'text-profit-600'
+      icon: TrendingUp,
+      title: "Maximización de Valor",
+      description: "Estrategias probadas para incrementar significativamente el valor de la propiedad en el mercado.",
+      features: ["Mejoras estratégicas", "Optimización de espacios", "Acabados premium"],
+      color: "accent"
     },
     {
-      icon: Store,
-      title: 'Locales Comerciales',
-      description: 'Renovamos espacios comerciales para aumentar su atractivo y rentabilidad.',
-      features: ['Fachadas modernas', 'Interiores funcionales', 'Iluminación comercial', 'Señalización'],
-      color: 'text-real-estate-600'
-    },
-    {
-      icon: Building2,
-      title: 'Edificios Completos',
-      description: 'Proyectos de renovación integral para edificios residenciales y comerciales.',
-      features: ['Renovación estructural', 'Sistemas modernos', 'Amenidades', 'Valorización integral'],
-      color: 'text-profit-600'
+      icon: Users,
+      title: "Nuestra Propuesta de Valor",
+      description: "Ofrecemos una experiencia integral que combina expertise técnico, transparencia total y resultados garantizados.",
+      features: ["Experiencia comprobada", "Transparencia total", "Resultados garantizados"],
+      color: "primary"
     }
   ]
 
-  const renovationServices = [
-    {
-      icon: Hammer,
-      title: 'Renovación Estructural',
-      description: 'Reparación y mejora de cimientos, muros y estructura general.'
-    },
-    {
-      icon: Palette,
-      title: 'Acabados Premium',
-      description: 'Pisos, paredes, techos y detalles con materiales de alta calidad.'
-    },
-    {
-      icon: Wrench,
-      title: 'Sistemas Modernos',
-      description: 'Instalación de sistemas eléctricos, plomería y climatización actualizados.'
-    }
-  ]
+
 
   return (
-    <section id="servicios" className="py-20 bg-gray-50">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Nuestros <span className="gradient-text">Servicios</span>
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Especialistas en renovación de todo tipo de propiedades inmobiliarias. 
-            Transformamos espacios para maximizar su valor y potencial de venta.
-          </p>
-        </div>
-
-        {/* Property Types */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
-          {services.map((service, index) => (
-            <Card key={index} className="card-hover text-center">
-              <CardHeader>
-                <div className={`mx-auto w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mb-4`}>
-                  <service.icon className={`h-8 w-8 ${service.color}`} />
-                </div>
-                <CardTitle className="text-xl">{service.title}</CardTitle>
-                <CardDescription className="text-base">
-                  {service.description}
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="text-sm text-gray-600 space-y-2">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center justify-center">
-                      <span className="w-2 h-2 bg-real-estate-400 rounded-full mr-2"></span>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-
-        {/* Renovation Services */}
-        <div className="text-center mb-12">
-          <h3 className="text-3xl font-bold text-gray-900 mb-4">
-            Servicios de <span className="gradient-text">Renovación</span>
-          </h3>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Ofrecemos servicios integrales de renovación para transformar completamente tu propiedad
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {renovationServices.map((service, index) => (
-            <Card key={index} className="card-hover text-center">
-              <CardHeader>
-                <div className="mx-auto w-16 h-16 bg-real-estate-100 rounded-full flex items-center justify-center mb-4">
-                  <service.icon className="h-8 w-8 text-real-estate-600" />
-                </div>
-                <CardTitle className="text-xl">{service.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-base">
-                  {service.description}
-                </CardDescription>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-
-        {/* CTA Section */}
-        <div className="text-center mt-16">
-          <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              ¿Tienes una propiedad para renovar?
-            </h3>
-            <p className="text-gray-600 mb-6">
-              Contáctanos para una evaluación gratuita y sin compromisos
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-real-estate-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-real-estate-700 transition-colors">
-                Solicitar Evaluación
-              </button>
-              <button className="border border-real-estate-600 text-real-estate-600 px-8 py-3 rounded-lg font-semibold hover:bg-real-estate-50 transition-colors">
-                Ver Portafolio
-              </button>
-            </div>
+    <section id="servicios" className="py-20 bg-gradient-to-br from-muted/30 to-background">
+      <div className="container mx-auto px-6">
+        {/* Header */}
+        <div className="text-center space-y-6 mb-16">
+          <div className="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium">
+            Nuestros Servicios
           </div>
+          <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground max-w-3xl mx-auto leading-tight">
+            Proceso Completo de 
+            <span className="text-primary block">Flipping Inmobiliario</span>
+          </h2>
+          <p className="text-lg text-muted-foreground text-elegant max-w-2xl mx-auto">
+            Desde la identificación de la propiedad hasta la entrega final, 
+            manejamos cada aspecto del proceso con profesionalismo y excelencia.
+          </p>
+        </div>
+
+        {/* Services Grid */}
+        <div className="grid md:grid-cols-3 gap-8 mb-20">
+          {services.map((service, index) => (
+            <Card key={index} className="border-border hover:shadow-xl transition-all duration-300 group">
+              <CardContent className="p-8 space-y-6">
+                <div className={`w-16 h-16 bg-${service.color}/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                  <service.icon className={`w-8 h-8 text-${service.color}`} />
+                </div>
+                
+                <div className="space-y-4">
+                  <h3 className="text-xl font-serif font-medium text-foreground">
+                    {service.title}
+                  </h3>
+                  <p className="text-muted-foreground text-elegant">
+                    {service.description}
+                  </p>
+                </div>
+
+                <div className="space-y-3">
+                  {service.features.map((feature, idx) => (
+                    <div key={idx} className="flex items-center space-x-3">
+                      <div className={`w-2 h-2 bg-${service.color} rounded-full`} />
+                      <span className="text-sm text-muted-foreground">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
+
+
+        {/* CTA */}
+        <div className="text-center mt-16">
+          <Button 
+            size="lg"
+            className="bg-primary hover:bg-primary/90 text-white"
+            onClick={() => {
+              const element = document.getElementById('contacto')
+              if (element) element.scrollIntoView({ behavior: 'smooth' })
+            }}
+          >
+            Solicitar Consulta Gratuita
+          </Button>
         </div>
       </div>
     </section>
   )
 }
-
-export default ServicesSection

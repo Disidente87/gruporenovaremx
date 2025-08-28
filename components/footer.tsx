@@ -1,148 +1,193 @@
-import { Separator } from '@/components/ui/separator'
-import { Building2, Phone, Mail, MapPin, Facebook, Instagram, Link, Twitter } from 'lucide-react'
+import { Building2, Mail, Phone, MapPin, Facebook, Instagram, Linkedin, Twitter } from "lucide-react"
+import { Button } from "./ui/button"
+import { Separator } from "./ui/separator"
 
-function Footer() {
+export function Footer() {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   const currentYear = new Date().getFullYear()
 
-  const quickLinks = [
-    { name: 'Inicio', href: '#inicio' },
-    { name: 'Servicios', href: '#servicios' },
-    { name: 'Proceso', href: '#proceso' },
-    { name: 'Nosotros', href: '#nosotros' },
-    { name: 'Contacto', href: '#contacto' }
-  ]
-
-  const services = [
-    'Casas Residenciales',
-    'Departamentos',
-    'Locales Comerciales',
-    'Edificios Completos',
-    'Renovación Estructural',
-    'Acabados Premium'
-  ]
-
-  const socialLinks = [
-    { name: 'Facebook', icon: Facebook, href: '#' },
-    { name: 'Instagram', icon: Instagram, href: '#' },
-    { name: 'LinkedIn', icon: Link, href: '#' },
-    { name: 'Twitter', icon: Twitter, href: '#' }
-  ]
-
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+    <footer className="bg-slate-900 text-white">
+      <div className="container mx-auto px-6 py-16">
+        <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
           {/* Company Info */}
-          <div className="lg:col-span-2">
-            <div className="mb-6">
-              <h3 className="text-2xl font-bold gradient-text mb-4">
-                Grupo Renovare MX
+          <div className="space-y-6">
+            <div className="flex items-center space-x-3">
+              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                <Building2 className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl font-serif font-semibold">
+                GrupoRenovareMX
               </h3>
-              <p className="text-gray-300 mb-6 leading-relaxed">
-                Especialistas en flipping inmobiliario. Transformamos propiedades para maximizar 
-                su valor y generar ganancias compartidas. Sin inversión inicial, solo el potencial 
-                de tu inmueble.
-              </p>
             </div>
+            <p className="text-slate-300 text-elegant">
+              Especializados en flipping inmobiliario, transformamos propiedades 
+              en oportunidades de inversión exitosas y hogares excepcionales.
+            </p>
             
-            {/* Contact Info */}
+            {/* Social Media */}
             <div className="space-y-3">
-              <div className="flex items-center space-x-3">
-                <Phone className="h-5 w-5 text-real-estate-400" />
-                <span className="text-gray-300">+52 (55) 1234-5678</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Mail className="h-5 w-5 text-real-estate-400" />
-                <span className="text-gray-300">info@gruporenovaremx.com</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <MapPin className="h-5 w-5 text-real-estate-400" />
-                <span className="text-gray-300">Av. Insurgentes Sur 1234, CDMX</span>
+              <h4 className="font-medium">Síguenos</h4>
+              <div className="flex space-x-3">
+                <Button size="sm" variant="outline" className="border-slate-600 text-slate-300 hover:bg-slate-700 hover:text-white">
+                  <Facebook className="w-4 h-4" />
+                </Button>
+                <Button size="sm" variant="outline" className="border-slate-600 text-slate-300 hover:bg-slate-700 hover:text-white">
+                  <Instagram className="w-4 h-4" />
+                </Button>
+                <Button size="sm" variant="outline" className="border-slate-600 text-slate-300 hover:bg-slate-700 hover:text-white">
+                  <Linkedin className="w-4 h-4" />
+                </Button>
+                <Button size="sm" variant="outline" className="border-slate-600 text-slate-300 hover:bg-slate-700 hover:text-white">
+                  <Twitter className="w-4 h-4" />
+                </Button>
               </div>
             </div>
           </div>
 
           {/* Quick Links */}
-          <div>
-            <h4 className="text-lg font-semibold mb-6 text-white">Enlaces Rápidos</h4>
-            <ul className="space-y-3">
-              {quickLinks.map((link, index) => (
-                <li key={index}>
-                  <a
-                    href={link.href}
-                    className="text-gray-300 hover:text-real-estate-400 transition-colors duration-200"
-                  >
-                    {link.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
+          <div className="space-y-6">
+            <h4 className="text-lg font-serif font-medium">Enlaces Rápidos</h4>
+            <nav className="space-y-3">
+              <button 
+                onClick={() => scrollToSection('inicio')}
+                className="block text-slate-300 hover:text-white transition-colors text-left"
+              >
+                Inicio
+              </button>
+              <button 
+                onClick={() => scrollToSection('quienes-somos')}
+                className="block text-slate-300 hover:text-white transition-colors text-left"
+              >
+                Quiénes Somos
+              </button>
+              <button 
+                onClick={() => scrollToSection('servicios')}
+                className="block text-slate-300 hover:text-white transition-colors text-left"
+              >
+                Servicios
+              </button>
+              <button 
+                onClick={() => scrollToSection('proyectos')}
+                className="block text-slate-300 hover:text-white transition-colors text-left"
+              >
+                Proyectos
+              </button>
+              <button 
+                onClick={() => scrollToSection('testimonios')}
+                className="block text-slate-300 hover:text-white transition-colors text-left"
+              >
+                Testimonios
+              </button>
+              <button 
+                onClick={() => scrollToSection('contacto')}
+                className="block text-slate-300 hover:text-white transition-colors text-left"
+              >
+                Contacto
+              </button>
+            </nav>
           </div>
 
           {/* Services */}
-          <div>
-            <h4 className="text-lg font-semibold mb-6 text-white">Nuestros Servicios</h4>
-            <ul className="space-y-3">
-              {services.map((service, index) => (
-                <li key={index}>
-                  <span className="text-gray-300 hover:text-real-estate-400 transition-colors duration-200 cursor-pointer">
-                    {service}
-                  </span>
-                </li>
-              ))}
-            </ul>
+          <div className="space-y-6">
+            <h4 className="text-lg font-serif font-medium">Servicios</h4>
+            <div className="space-y-3">
+              <div className="text-slate-300">Análisis de Mercado</div>
+              <div className="text-slate-300">Renovación Integral</div>
+              <div className="text-slate-300">Maximización de Valor</div>
+              <div className="text-slate-300">Consultoría Inmobiliaria</div>
+              <div className="text-slate-300">Gestión de Proyectos</div>
+              <div className="text-slate-300">Venta de Propiedades</div>
+            </div>
+          </div>
+
+          {/* Contact Info */}
+          <div className="space-y-6">
+            <h4 className="text-lg font-serif font-medium">Contacto</h4>
+            <div className="space-y-4">
+              <div className="flex items-start space-x-3">
+                <MapPin className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                <div className="text-slate-300">
+                  <div>Av. Polanco 123, Polanco</div>
+                  <div>Ciudad de México, CDMX</div>
+                  <div>C.P. 11560</div>
+                </div>
+              </div>
+              
+              <div className="flex items-center space-x-3">
+                <Phone className="w-5 h-5 text-primary flex-shrink-0" />
+                <div className="text-slate-300">
+                  <a href="tel:+525512345678" className="hover:text-white transition-colors">
+                    +52 55 1234-5678
+                  </a>
+                </div>
+              </div>
+              
+              <div className="flex items-center space-x-3">
+                <Mail className="w-5 h-5 text-primary flex-shrink-0" />
+                <div className="text-slate-300">
+                  <a href="mailto:contacto@gruporenovaremx.com" className="hover:text-white transition-colors">
+                    contacto@gruporenovaremx.com
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Business Hours */}
+            <div className="space-y-2">
+              <h5 className="font-medium">Horarios de Atención</h5>
+              <div className="text-sm text-slate-300 space-y-1">
+                <div>Lunes - Viernes: 9:00 - 18:00</div>
+                <div>Sábados: 10:00 - 14:00</div>
+                <div>Domingos: Cerrado</div>
+              </div>
+            </div>
           </div>
         </div>
 
-        <Separator className="bg-gray-700 mb-8" />
+        <Separator className="my-8 bg-slate-700" />
 
-        {/* Bottom Footer */}
+        {/* Bottom Section */}
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-          {/* Copyright */}
-          <div className="text-gray-400 text-sm">
-            © {currentYear} Grupo Renovare MX. Todos los derechos reservados.
+          <div className="text-slate-400 text-sm">
+            © {currentYear} GrupoRenovareMX. Todos los derechos reservados.
           </div>
-
-          {/* Social Links */}
-          <div className="flex space-x-4">
-            {socialLinks.map((social, index) => (
-              <a
-                key={index}
-                href={social.href}
-                className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-real-estate-600 hover:text-white transition-all duration-200"
-                aria-label={social.name}
-              >
-                <social.icon className="h-5 w-5" />
-              </a>
-            ))}
+          
+          <div className="flex flex-wrap gap-6 text-sm">
+            <a href="#" className="text-slate-400 hover:text-white transition-colors">
+              Política de Privacidad
+            </a>
+            <a href="#" className="text-slate-400 hover:text-white transition-colors">
+              Términos de Servicio
+            </a>
+            <a href="#" className="text-slate-400 hover:text-white transition-colors">
+              Aviso Legal
+            </a>
+            <a href="#" className="text-slate-400 hover:text-white transition-colors">
+              Cookies
+            </a>
           </div>
         </div>
 
         {/* Additional Info */}
-        <div className="mt-8 pt-8 border-t border-gray-700">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center text-sm text-gray-400">
-            <div>
-              <Building2 className="h-6 w-6 mx-auto mb-2 text-real-estate-400" />
-              <p>Certificados por la AMI</p>
-            </div>
-            <div>
-              <div className="w-6 h-6 mx-auto mb-2 bg-profit-500 rounded-full flex items-center justify-center">
-                <span className="text-white text-xs font-bold">✓</span>
-              </div>
-              <p>Garantía de Calidad</p>
-            </div>
-            <div>
-              <div className="w-6 h-6 mx-auto mb-2 bg-real-estate-500 rounded-full flex items-center justify-center">
-                <span className="text-white text-xs font-bold">$</span>
-              </div>
-              <p>Sin Costos Ocultos</p>
-            </div>
+        <div className="mt-8 pt-6 border-t border-slate-700">
+          <div className="text-xs text-slate-500 text-center">
+            <p>
+              GrupoRenovareMX es una empresa especializada en flipping inmobiliario registrada en México. 
+              Todos nuestros proyectos cumplen con las normativas locales y federales aplicables.
+            </p>
+            <p className="mt-2">
+              RFC: GRM123456789 | CNBV No autorizado como intermediario financiero
+            </p>
           </div>
         </div>
       </div>
     </footer>
   )
 }
-
-export default Footer

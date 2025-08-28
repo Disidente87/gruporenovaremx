@@ -1,94 +1,121 @@
 'use client'
 
-import { useState } from 'react'
-import { Button } from '@/components/ui/button'
-import { Menu, X, Building2, Home, Users, Calculator, Phone } from 'lucide-react'
+import { Button } from "./ui/button"
+import { Home, Building2, Users, Mail, Menu } from "lucide-react"
+import { useState } from "react"
+import Image from "next/image"
+import Link from "next/link"
+import { useRouter, usePathname } from "next/navigation"
 
-function Header() {
+export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const router = useRouter()
+  const pathname = usePathname()
 
-  const navigation = [
-    { name: 'Inicio', href: '#inicio', icon: Home },
-    { name: 'Servicios', href: '#servicios', icon: Building2 },
-    { name: 'Proceso', href: '#proceso', icon: Calculator },
-    { name: 'Nosotros', href: '#nosotros', icon: Users },
-    { name: 'Contacto', href: '#contacto', icon: Phone },
-  ]
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+    setIsMenuOpen(false)
+  }
+
+  const handleNavigation = (path: string) => {
+    if (pathname === path) {
+      // If we're already on the page, scroll to section
+      scrollToSection('inicio')
+    } else {
+      // Navigate to the page
+      router.push(path)
+    }
+    setIsMenuOpen(false)
+  }
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border">
+      <div className="container mx-auto px-6 py-4">
+        <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center">
-            <div className="flex-shrink-0">
-              <h1 className="text-2xl font-bold gradient-text">
-                Grupo Renovare MX
-              </h1>
+          <Link href="/" className="flex items-center space-x-3">
+            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+              <Building2 className="w-6 h-6 text-white" />
             </div>
-          </div>
+            <h1 className="text-2xl font-serif font-semibold text-primary">
+              GrupoRenovareMX
+            </h1>
+          </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
-            {navigation.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="text-gray-700 hover:text-real-estate-600 px-3 py-2 text-sm font-medium transition-colors duration-200"
-              >
-                {item.name}
-              </a>
-            ))}
+          <nav className="hidden md:flex items-center space-x-8">
+            <button 
+              onClick={() => handleNavigation('/')}
+              className="text-foreground hover:text-primary transition-colors font-medium"
+            >
+              Inicio
+            </button>
+            <button 
+              onClick={() => handleNavigation('/about')}
+              className="text-foreground hover:text-primary transition-colors font-medium"
+            >
+              Quiénes Somos
+            </button>
+            <button 
+              onClick={() => handleNavigation('/services')}
+              className="text-foreground hover:text-primary transition-colors font-medium"
+            >
+              Servicios
+            </button>
+            <Button 
+              onClick={() => scrollToSection('contacto')}
+              className="bg-primary hover:bg-primary/90 text-white"
+            >
+              <Mail className="w-4 h-4 mr-2" />
+              Contacto
+            </Button>
           </nav>
 
-          {/* CTA Button */}
-          <div className="hidden md:flex">
-            <Button variant="real-estate" size="lg">
-              Consulta Gratuita
-            </Button>
-          </div>
-
-          {/* Mobile menu button */}
-          <div className="md:hidden">
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              aria-label="Toggle menu"
-            >
-              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </Button>
-          </div>
+          {/* Mobile Menu Button */}
+          <button 
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="md:hidden p-2"
+          >
+            <Menu className="w-6 h-6" />
+          </button>
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-200">
-              {navigation.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="text-gray-700 hover:text-real-estate-600 block px-3 py-2 text-base font-medium transition-colors duration-200"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  <div className="flex items-center space-x-2">
-                    <item.icon className="h-5 w-5" />
-                    <span>{item.name}</span>
-                  </div>
-                </a>
-              ))}
-              <div className="pt-4">
-                <Button variant="real-estate" className="w-full">
-                  Consulta Gratuita
-                </Button>
-              </div>
+          <nav className="md:hidden mt-4 pb-4 border-t border-border pt-4">
+            <div className="flex flex-col space-y-4">
+              <button 
+                onClick={() => handleNavigation('/')}
+                className="text-left text-foreground hover:text-primary transition-colors font-medium"
+              >
+                Inicio
+              </button>
+              <button 
+                onClick={() => handleNavigation('/about')}
+                className="text-left text-foreground hover:text-primary transition-colors font-medium"
+              >
+                Quiénes Somos
+              </button>
+              <button 
+                onClick={() => handleNavigation('/services')}
+                className="text-left text-foreground hover:text-primary transition-colors font-medium"
+              >
+                Servicios
+              </button>
+              <Button 
+                onClick={() => scrollToSection('contacto')}
+                className="bg-primary hover:bg-primary/90 text-white w-fit"
+              >
+                <Mail className="w-4 h-4 mr-2" />
+                Contacto
+              </Button>
             </div>
-          </div>
+          </nav>
         )}
       </div>
     </header>
   )
 }
-
-export default Header
