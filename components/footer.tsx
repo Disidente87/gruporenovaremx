@@ -1,6 +1,7 @@
 import { Building2, Mail, Phone, MapPin, Facebook, Instagram, Linkedin, Twitter } from "lucide-react"
 import { Button } from "./ui/button"
 import { Separator } from "./ui/separator"
+import Link from "next/link"
 
 export function Footer() {
   const scrollToSection = (sectionId: string) => {
@@ -61,30 +62,18 @@ export function Footer() {
               >
                 Inicio
               </button>
-              <button 
-                onClick={() => scrollToSection('quienes-somos')}
+              <Link 
+                href="/about"
                 className="block text-slate-300 hover:text-white transition-colors text-left"
               >
                 Quiénes Somos
-              </button>
-              <button 
-                onClick={() => scrollToSection('servicios')}
+              </Link>
+              <Link 
+                href="/services"
                 className="block text-slate-300 hover:text-white transition-colors text-left"
               >
                 Servicios
-              </button>
-              <button 
-                onClick={() => scrollToSection('proyectos')}
-                className="block text-slate-300 hover:text-white transition-colors text-left"
-              >
-                Proyectos
-              </button>
-              <button 
-                onClick={() => scrollToSection('testimonios')}
-                className="block text-slate-300 hover:text-white transition-colors text-left"
-              >
-                Testimonios
-              </button>
+              </Link>
               <button 
                 onClick={() => scrollToSection('contacto')}
                 className="block text-slate-300 hover:text-white transition-colors text-left"
@@ -123,18 +112,24 @@ export function Footer() {
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-primary flex-shrink-0" />
                 <div className="text-slate-300">
-                  <a href="tel:+525512345678" className="hover:text-white transition-colors">
-                    +52 55 1234-5678
-                  </a>
+                  <div>664 330 6976</div>
+                  <div>665 118 1771</div>
                 </div>
               </div>
               
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-primary flex-shrink-0" />
                 <div className="text-slate-300">
-                  <a href="mailto:contacto@gruporenovaremx.com" className="hover:text-white transition-colors">
-                    contacto@gruporenovaremx.com
-                  </a>
+                  <div>
+                    <a href="mailto:contacto@gruporenovaremx.com" className="hover:text-white transition-colors">
+                      contacto@gruporenovaremx.com
+                    </a>
+                  </div>
+                  <div>
+                    <a href="mailto:ventas@gruporenovaremx.com" className="hover:text-white transition-colors">
+                      ventas@gruporenovaremx.com
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -143,8 +138,8 @@ export function Footer() {
             <div className="space-y-2">
               <h5 className="font-medium">Horarios de Atención</h5>
               <div className="text-sm text-slate-300 space-y-1">
-                <div>Lunes - Viernes: 9:00 - 18:00</div>
-                <div>Sábados: 10:00 - 14:00</div>
+                <div>Lunes - Viernes: 7:00 am - 6:00 pm</div>
+                <div>Sábados: 10:00 am - 5:00 pm</div>
                 <div>Domingos: Cerrado</div>
               </div>
             </div>
