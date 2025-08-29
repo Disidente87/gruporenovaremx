@@ -66,7 +66,7 @@ export function Header() {
               Servicios
             </button>
             <Button 
-              onClick={() => scrollToSection('contacto')}
+              onClick={() => handleNavigation('/contact')}
               className="bg-primary hover:bg-primary/90 text-white"
             >
               <Mail className="w-4 h-4 mr-2" />
@@ -106,7 +106,7 @@ export function Header() {
                 Servicios
               </button>
               <Button 
-                onClick={() => scrollToSection('contacto')}
+                onClick={() => handleNavigation('/contact')}
                 className="bg-primary hover:bg-primary/90 text-white w-fit"
               >
                 <Mail className="w-4 h-4 mr-2" />

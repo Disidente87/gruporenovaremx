@@ -74,12 +74,12 @@ export function Footer() {
               >
                 Servicios
               </Link>
-              <button 
-                onClick={() => scrollToSection('contacto')}
+              <Link 
+                href="/contact"
                 className="block text-slate-300 hover:text-white transition-colors text-left"
               >
                 Contacto
-              </button>
+              </Link>
             </nav>
           </div>
 
