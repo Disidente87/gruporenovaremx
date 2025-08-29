@@ -7,7 +7,8 @@ import { Textarea } from "./ui/textarea"
 import { Card, CardContent } from "./ui/card"
 import { Label } from "./ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select"
-import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from "lucide-react"
+import { Mail, Phone, MapPin, Clock, Send, CheckCircle, ArrowLeft } from "lucide-react"
+import Link from "next/link"
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -73,6 +74,16 @@ export function ContactSection() {
   return (
     <section id="contacto" className="py-20 bg-white">
       <div className="container mx-auto px-6">
+        {/* Back Button */}
+        <div className="mb-8">
+          <Link href="/main">
+            <Button variant="outline" className="flex items-center gap-2 text-muted-foreground hover:text-foreground hover:border-primary">
+              <ArrowLeft className="w-4 h-4" />
+              Volver al Inicio
+            </Button>
+          </Link>
+        </div>
+
         {/* Header */}
         <div className="text-center space-y-6 mb-16">
           <div className="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium">
