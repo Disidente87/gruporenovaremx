@@ -5,7 +5,7 @@ import { FloatingWhatsApp } from "./floating-whatsapp"
 import { Button } from "./ui/button"
 import Link from "next/link"
 
-export function HeroSection() {
+export function VenderSection() {
   const router = useRouter()
   
   const scrollToSection = (sectionId: string) => {
