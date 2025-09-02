@@ -1,8 +1,9 @@
-import { Button } from "./ui/button"
-import { ArrowRight, PlayCircle } from "lucide-react"
+import { PlayCircle, ArrowRight, ArrowLeft } from "lucide-react"
 import { ImageWithFallback } from "./ui/image-with-fallback"
 import { useRouter } from "next/navigation"
 import { FloatingWhatsApp } from "./floating-whatsapp"
+import { Button } from "./ui/button"
+import Link from "next/link"
 
 export function HeroSection() {
   const router = useRouter()
@@ -15,9 +16,25 @@ export function HeroSection() {
   }
 
   return (
-    <section id="inicio" className="min-h-screen flex items-center bg-gradient-to-br from-background to-muted/30 pt-24 mb-16">
-      <div className="container mx-auto px-6">
-        <div className="text-center max-w-4xl mx-auto">
+    <>
+      {/* Back to Home Button */}
+      <div className="pt-24 pb-4">
+        <div className="container mx-auto px-6">
+          <Link href="/">
+            <Button 
+              variant="outline" 
+              className="border-primary text-primary hover:bg-primary/5"
+            >
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              Volver al Inicio
+            </Button>
+          </Link>
+        </div>
+      </div>
+      
+      <section id="inicio" className="min-h-screen flex items-center bg-gradient-to-br from-background to-muted/30 mb-16">
+        <div className="container mx-auto px-6">
+          <div className="text-center max-w-4xl mx-auto">
           {/* Content */}
           <div className="space-y-8">
             <div className="space-y-6">
@@ -26,7 +43,7 @@ export function HeroSection() {
                 <span className="text-primary block">y la deuda crece,</span>
                 <span className="text-secondary">hay una salida</span>
               </h1>
-              <p className="text-lg text-muted-foreground text-elegant max-w-xl">
+              <p className="text-lg text-muted-foreground text-elegant max-w-lg mx-auto">
                 Te acompañamos con experiencia y confianza para recuperar tu paz.
               </p>
             </div>
@@ -46,16 +63,17 @@ export function HeroSection() {
                 }}
                 className="bg-primary hover:bg-primary/90 text-white font-medium"
               >
-                Quiero mi solución ahora
+                Quiero Vender
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
             </div>
           </div>
+          </div>
         </div>
-      </div>
+      </section>
       
       {/* Floating WhatsApp Icon */}
       <FloatingWhatsApp />
-    </section>
+    </>
   )
 }

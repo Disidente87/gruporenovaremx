@@ -75,7 +75,7 @@ export function ContactSection() {
     <section id="contacto" className="py-20 bg-white">
       <div className="container mx-auto px-6">
         {/* Back Button */}
-        <div className="mb-8">
+        <div className="mb-1">
           <Link href="/main">
             <Button variant="outline" className="flex items-center gap-2 text-muted-foreground hover:text-foreground hover:border-primary">
               <ArrowLeft className="w-4 h-4" />

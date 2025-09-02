@@ -1,23 +1,17 @@
 'use client'
 
 import { Header } from "@/components/header"
-import { HeroSection } from "@/components/hero-section"
-import { AboutSection } from "@/components/about-section"
-import { ServicesSection } from "@/components/services-section"
-import { ProjectsSection } from "@/components/projects-section"
-import { TestimonialsSection } from "@/components/testimonials-section"
+import { HeroSection } from "@/components/vender-section"
 import { Footer } from "@/components/footer"
+import { FloatingWhatsApp } from "@/components/floating-whatsapp"
 
 export default function Home() {
   return (
     <main className="min-h-screen">
       <Header />
       <HeroSection />
-      <AboutSection />
-      <ServicesSection />
-      <ProjectsSection />
-      <TestimonialsSection />
       <Footer />
+      <FloatingWhatsApp />
     </main>
   )
 }

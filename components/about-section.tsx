@@ -1,5 +1,6 @@
-import { Shield, Target, Heart, Award } from "lucide-react"
+import { Shield, Target, Heart, Award, ArrowRight } from "lucide-react"
 import { Card, CardContent } from "./ui/card"
+import { Button } from "./ui/button"
 
 export function AboutSection() {
   const values = [
@@ -26,39 +27,49 @@ export function AboutSection() {
   ]
 
   return (
-    <section id="quienes-somos" className="py-20 bg-white">
+    <section id="quienes-somos" className="py-2 bg-white mb-16">
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Content */}
           <div className="space-y-8">
             <div className="space-y-6">
-              <div>
-                <div className="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
-                  Nuestra Historia
+                              <div>
+                  <div className="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
+                    Quiénes Somos
+                  </div>
+                  <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground leading-tight">
+                    Más que especialistas en vivienda, 
+                    <span className="text-primary block">aliados en tu tranquilidad</span>
+                  </h2>
                 </div>
-                <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground leading-tight">
-                  Expertos en Flipping Inmobiliario con 
-                  <span className="text-primary block">Visión de Futuro</span>
-                </h2>
-              </div>
-              
-              <div className="space-y-4 text-elegant">
-                <p className="text-muted-foreground">
-                  En GrupoRenovareMX, nos especializamos en identificar propiedades con 
-                  potencial y transformarlas en hogares excepcionales. Nuestro enfoque 
-                  combina análisis de mercado profundo, renovaciones de alta calidad y 
-                  un profundo entendimiento de las necesidades familiares.
-                </p>
-                <p className="text-muted-foreground">
-                  Creemos que cada propiedad tiene una historia que contar y un potencial 
-                  que desbloquear. Trabajamos con pasión para crear espacios que no solo 
-                  generen valor económico, sino que también se conviertan en el hogar 
-                  perfecto para familias que buscan calidad de vida.
-                </p>
-              </div>
+                
+                <div className="space-y-4 text-elegant">
+                  <p className="text-muted-foreground">
+                    Imagina que tienes una casa que alguna vez fue tu sueño, pero que hoy se deteriora mientras la deuda sigue creciendo. La preocupación no te deja dormir, y sientes que cada día es más difícil salir adelante. En Grupo Renovare MX, hemos visto estas historias muchas veces, y sabemos exactamente lo que se siente.
+                  </p>
+                  <p className="text-muted-foreground">
+                    Nuestro equipo está aquí para escucharte, comprender tu situación y acompañarte en cada paso del proceso. No solo nos encargamos de remodelar y vender tu casa: te ayudamos a transformar un problema que parecía imposible en tranquilidad y libertad. Cada decisión se toma pensando en tu bienestar y en el de tu familia, porque sabemos que tu hogar es más que un inmueble: es tu patrimonio, tu historia y tu paz.
+                  </p>
+                  <p className="text-muted-foreground">
+                    Con nosotros, no estás solo. Somos especialistas que entienden lo que estás viviendo, y trabajamos con empatía, transparencia y profesionalismo para que recuperes confianza, control y tranquilidad en tu vida. En Grupo Renovare MX, tu situación es nuestra prioridad y tu paz nuestro compromiso.
+                  </p>
+                </div>
             </div>
 
-            
+            {/* CTA Button */}
+            <div className="pt-4">
+              <Button 
+                size="lg"
+                onClick={() => {
+                  const message = encodeURIComponent('Hola, quiero hablar con un especialista de Grupo Renovare MX sobre mi casa y deuda.')
+                  window.open(`https://wa.me/+526643306976?text=${message}`, '_blank')
+                }}
+                className="bg-primary hover:bg-primary/90 text-white font-medium"
+              >
+                Empieza tu proceso hoy
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+            </div>
           </div>
 
           {/* Values Grid */}

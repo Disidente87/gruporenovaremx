@@ -6,6 +6,7 @@ import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { ArrowLeft } from "lucide-react"
 import Link from "next/link"
+import { FloatingWhatsApp } from "@/components/floating-whatsapp"
 
 export default function AboutPage() {
   return (
@@ -13,7 +14,7 @@ export default function AboutPage() {
       <Header />
       
       {/* Back to Home Button */}
-      <div className="pt-24 pb-8">
+      <div className="pt-24 pb-4">
         <div className="container mx-auto px-6">
           <Link href="/">
             <Button 
@@ -29,6 +30,7 @@ export default function AboutPage() {
       
       <AboutSection />
       <Footer />
+      <FloatingWhatsApp />
     </main>
   )
 }

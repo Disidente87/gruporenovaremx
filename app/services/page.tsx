@@ -1,8 +1,9 @@
 'use client'
 
-import { ServicesSection } from "@/components/services-section"
 import { Header } from "@/components/header"
+import { ServicesSection } from "@/components/services-section"
 import { Footer } from "@/components/footer"
+import { FloatingWhatsApp } from "@/components/floating-whatsapp"
 import { Button } from "@/components/ui/button"
 import { ArrowLeft } from "lucide-react"
 import Link from "next/link"
@@ -13,7 +14,7 @@ export default function ServicesPage() {
       <Header />
       
       {/* Back to Home Button */}
-      <div className="pt-24 pb-8">
+      <div className="pt-24 pb-4">
         <div className="container mx-auto px-6">
           <Link href="/">
             <Button 
@@ -29,6 +30,7 @@ export default function ServicesPage() {
       
       <ServicesSection />
       <Footer />
+      <FloatingWhatsApp />
     </main>
   )
 }

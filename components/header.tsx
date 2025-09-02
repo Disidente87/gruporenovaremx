@@ -32,17 +32,27 @@ export function Header() {
   }
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[rgba(231,231,231,255)] backdrop-blur-sm border-b border-amber-200">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-              <Building2 className="w-6 h-6 text-white" />
-            </div>
-            <h1 className="text-2xl font-serif font-semibold text-primary">
-              GrupoRenovareMX
-            </h1>
+          <Link href="/" className="flex items-center -ml-2">
+            <Image
+              src="/logo_draw.png"
+              alt="GrupoRenovareMX Logo"
+              width={200}
+              height={40}
+              className="h-12 w-auto"
+              priority
+            />
+            <Image
+              src="/logo_texto.png"
+              alt="GrupoRenovareMX Text"
+              width={150}
+              height={40}
+              className="h-12 w-auto ml-0 scale-90 origin-left -mb-6"
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -52,6 +62,18 @@ export function Header() {
               className="text-foreground hover:text-primary transition-colors font-medium"
             >
               Inicio
+            </button>
+            <button 
+              onClick={() => handleNavigation('/comprar')}
+              className="text-foreground hover:text-primary transition-colors font-medium"
+            >
+              Comprar
+            </button>
+            <button 
+              onClick={() => handleNavigation('/vender')}
+              className="text-foreground hover:text-primary transition-colors font-medium"
+            >
+              Vender
             </button>
             <button 
               onClick={() => handleNavigation('/about')}
@@ -77,7 +99,7 @@ export function Header() {
           {/* Mobile Menu Button */}
           <button 
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2"
+            className="md:hidden p-4 -mb-6 -mr-4"
           >
             <Menu className="w-6 h-6" />
           </button>
@@ -92,6 +114,18 @@ export function Header() {
                 className="text-left text-foreground hover:text-primary transition-colors font-medium"
               >
                 Inicio
+              </button>
+              <button 
+                onClick={() => handleNavigation('/comprar')}
+                className="text-left text-foreground hover:text-primary transition-colors font-medium"
+              >
+                Comprar
+              </button>
+              <button 
+                onClick={() => handleNavigation('/vender')}
+                className="text-left text-foreground hover:text-primary transition-colors font-medium"
+              >
+                Vender
               </button>
               <button 
                 onClick={() => handleNavigation('/about')}

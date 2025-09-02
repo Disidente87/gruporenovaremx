@@ -1,17 +1,17 @@
 'use client'
 
 import { Header } from "@/components/header"
-import { LandingSection } from "@/components/landing-section"
+import { HeroSection } from "@/components/vender-section"
 import { Footer } from "@/components/footer"
 import { FloatingWhatsApp } from "@/components/floating-whatsapp"
 
-export default function Home() {
+export default function VenderPage() {
   return (
     <main className="min-h-screen">
-      <FloatingWhatsApp />
       <Header />
-      <LandingSection />
+      <HeroSection />
       <Footer />
+      <FloatingWhatsApp />
     </main>
   )
 }
