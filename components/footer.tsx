@@ -40,17 +40,17 @@ export function Footer() {
               <h4 className="font-medium">Síguenos</h4>
               <div className="flex space-x-3">
                 <Button 
-                  size="md" 
+                  size="default" 
                   variant="outline" 
-                  className="border-slate-600 text-slate-300 hover:bg-slate-700 hover:text-white p-3"
+                  className="border-slate-600 text-slate-300 hover:bg-slate-700 hover:text-white p-8"
                   onClick={() => window.open('https://www.facebook.com/cimacapitalmx/', '_blank')}
                 >
                   <FaFacebook className="w-14 h-14 text-blue-600" />
                 </Button>
                 <Button 
-                  size="md" 
+                  size="default" 
                   variant="outline" 
-                  className="border-slate-600 text-slate-300 hover:bg-slate-700 hover:text-white p-3"
+                  className="border-slate-600 text-slate-300 hover:bg-slate-700 hover:text-white p-8"
                   onClick={() => window.open('https://www.instagram.com/cimacapitalmx/', '_blank')}
                 >
                   <FaInstagram className="w-14 h-14 text-pink-600" />
@@ -69,12 +69,12 @@ export function Footer() {
           <div className="space-y-6">
             <h4 className="text-lg font-serif font-medium">Enlaces Rápidos</h4>
             <nav className="space-y-3">
-              <button 
-                onClick={() => scrollToSection('inicio')}
+              <Link 
+                href="/"
                 className="block text-slate-300 hover:text-white transition-colors text-left"
               >
                 Inicio
-              </button>
+              </Link>
               <Link 
                 href="/comprar"
                 className="block text-slate-300 hover:text-white transition-colors text-left"
