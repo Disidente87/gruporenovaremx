@@ -19,7 +19,7 @@ export default function AboutPage() {
           <Link href="/">
             <Button 
               variant="outline" 
-              className="border-primary/50 hover:bg-primary/10 bg-white/20 backdrop-blur-sm text-brand"
+              className="btn-back-home"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
               Volver al Inicio

@@ -44,7 +44,7 @@ export function ComprarSection() {
           <Link href="/">
             <Button 
               variant="outline" 
-              className="border-primary/50 hover:bg-primary/10 bg-white/20 backdrop-blur-sm text-brand"
+              className="btn-back-home"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
               Volver al Inicio
@@ -68,7 +68,7 @@ export function ComprarSection() {
             </div>
 
             <div className="text-center space-y-4">
-              <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
                 Te ayudamos a encontrar la propiedad ideal que se adapte a tus necesidades y presupuesto. 
                 Nuestro equipo de expertos te guiará en todo el proceso de compra con transparencia y confianza.
               </p>

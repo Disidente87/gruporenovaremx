@@ -23,7 +23,7 @@ export function VenderSection() {
           <Link href="/">
             <Button 
               variant="outline" 
-              className="border-primary/50 hover:bg-primary/10 bg-white/20 backdrop-blur-sm text-brand"
+              className="btn-back-home"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
               Volver al Inicio
@@ -49,7 +49,7 @@ export function VenderSection() {
             </div>
 
             <div className="text-center space-y-4">
-              <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
                 Sabemos lo que significa vivir con la preocupación de una deuda que no deja de crecer mientras tu casa pierde valor. Por eso, te acompañamos paso a paso con soluciones claras y humanas: remodelamos y vendemos tu vivienda para que recuperes estabilidad y paz.
               </p>
               <p className="text-lg text-muted-foreground font-medium">
