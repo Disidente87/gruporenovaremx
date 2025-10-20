@@ -2,15 +2,39 @@
 
 import { Button } from "./ui/button"
 import { Home, Building2, Users, Mail, Menu } from "lucide-react"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { useRouter, usePathname } from "next/navigation"
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [showCompanyName, setShowCompanyName] = useState(true)
   const router = useRouter()
   const pathname = usePathname()
+
+  useEffect(() => {
+    // Solo aplicar la lógica en la página principal
+    if (pathname !== '/') {
+      setShowCompanyName(true)
+      return
+    }
+
+    const handleScroll = () => {
+      const presentationSection = document.getElementById('presentation')
+      if (presentationSection) {
+        const rect = presentationSection.getBoundingClientRect()
+        // Si la sección presentation está visible (top > -100 para dar un margen), ocultar el texto
+        setShowCompanyName(rect.top < -100)
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    // Verificar el estado inicial
+    handleScroll()
+
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [pathname])
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId)
@@ -45,14 +69,11 @@ export function Header() {
               className="h-12 w-auto"
               priority
             />
-            {/* <Image
-              src="/logo_texto.png"
-              alt="GrupoRenovareMX Text"
-              width={150}
-              height={40}
-              className="h-12 w-auto ml-0 scale-90 origin-left -mb-6"
-              priority
-            /> */}
+            {showCompanyName && (
+              <span className="ml-3 text-xl font-serif font-bold" style={{color: '#206B68'}}>
+                Grupo Renovare MX
+              </span>
+            )}
           </Link>
 
           {/* Desktop Navigation */}
