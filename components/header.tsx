@@ -70,7 +70,7 @@ export function Header() {
               priority
             />
             {showCompanyName && (
-              <span className="ml-3 text-xl font-serif font-bold" style={{color: '#206B68'}}>
+              <span className="ml-3 text-xl font-serif font-bold text-brand">
                 Grupo Renovare MX
               </span>
             )}
@@ -110,7 +110,7 @@ export function Header() {
             </button> */}
             <Button 
               onClick={() => handleNavigation('/contact')}
-              className="bg-primary hover:bg-primary/90 text-white"
+              className="btn-brand"
             >
               <Mail className="w-4 h-4 mr-2" />
               Contacto
@@ -162,7 +162,7 @@ export function Header() {
               </button> */}
               <Button 
                 onClick={() => handleNavigation('/contact')}
-                className="bg-primary hover:bg-primary/90 text-white w-fit"
+                className="btn-brand w-fit"
               >
                 <Mail className="w-4 h-4 mr-2" />
                 Contacto

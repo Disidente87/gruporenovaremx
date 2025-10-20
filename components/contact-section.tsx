@@ -39,7 +39,7 @@ export function ContactSection() {
         {/* Back Button */}
         <div className="mb-1">
           <Link href="/main">
-            <Button variant="outline" className="flex items-center gap-2 hover:text-foreground hover:border-primary/50 bg-white/20 backdrop-blur-sm border-primary/50" style={{color: '#206b68'}}>
+            <Button variant="outline" className="flex items-center gap-2 hover:text-foreground hover:border-primary/50 bg-white/20 backdrop-blur-sm border-primary/50 text-brand">
               <ArrowLeft className="w-4 h-4" />
               Volver al Inicio
             </Button>

@@ -43,7 +43,7 @@ export function LandingSection() {
               className="h-10 w-auto"
               priority
             />
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold" style={{color: '#206b68'}}>
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-brand">
               Grupo Renovare MX
             </h1>
           </div>
@@ -63,7 +63,7 @@ export function LandingSection() {
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold text-foreground leading-tight">
                   Transformamos tu situación
                   <span className="text-primary block">en una oportunidad</span>
-                  <span className="text-secondary" style={{color: '#206b68'}}>de crecimiento</span>
+                  <span className="text-secondary text-brand">de crecimiento</span>
                 </h1>
               <p className="text-lg text-muted-foreground text-elegant max-w-lg mx-auto">
                 Te ayudamos a encontrar la mejor solución para tu propiedad.
@@ -80,7 +80,7 @@ export function LandingSection() {
                   onClick={() => {
                     window.location.href = '/comprar'
                   }}
-                  className="bg-primary hover:bg-primary/90 text-white font-medium"
+                  className="btn-brand font-medium"
                 >
                   Quiero comprar
                   <ArrowRight className="w-5 h-5 ml-2" />
@@ -90,7 +90,7 @@ export function LandingSection() {
                   onClick={() => {
                     window.location.href = '/vender'
                   }}
-                  className="bg-primary hover:bg-primary/90 text-white font-medium"
+                  className="btn-brand font-medium"
                 >
                   Quiero vender
                   <ArrowRight className="w-5 h-5 ml-2" />

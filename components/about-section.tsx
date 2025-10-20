@@ -61,7 +61,7 @@ export function AboutSection() {
                   const message = encodeURIComponent('Hola, quiero hablar con un especialista de Grupo Renovare MX sobre mi casa y deuda.')
                   window.open(`https://wa.me/+526643306976?text=${message}`, '_blank')
                 }}
-                className="bg-primary hover:bg-primary/90 text-white font-medium"
+                className="btn-brand font-medium"
               >
                 Empieza tu proceso hoy
                 <ArrowRight className="w-5 h-5 ml-2" />

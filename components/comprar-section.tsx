@@ -44,8 +44,7 @@ export function ComprarSection() {
           <Link href="/">
             <Button 
               variant="outline" 
-              className="border-primary/50 hover:bg-primary/10 bg-white/20 backdrop-blur-sm"
-              style={{color: '#206b68'}}
+              className="border-primary/50 hover:bg-primary/10 bg-white/20 backdrop-blur-sm text-brand"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
               Volver al Inicio
@@ -82,7 +81,7 @@ export function ComprarSection() {
                   const message = encodeURIComponent('Hola, quiero consultoria para comprar una casa')
                   window.open(`https://wa.me/+526643306976?text=${message}`, '_blank')
                 }}
-                className="bg-primary hover:bg-primary/90 text-white font-medium"
+                className="btn-brand font-medium"
               >
                 Quiero comprar
                 <ArrowRight className="w-5 h-5 ml-2" />

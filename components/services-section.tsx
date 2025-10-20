@@ -84,7 +84,7 @@ export function ServicesSection() {
         <div className="text-center mt-16">
           <Button 
             size="lg"
-            className="bg-primary hover:bg-primary/90 text-white"
+            className="btn-brand"
             onClick={() => {
               const element = document.getElementById('contacto')
               if (element) element.scrollIntoView({ behavior: 'smooth' })

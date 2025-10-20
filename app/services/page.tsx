@@ -19,8 +19,7 @@ export default function ServicesPage() {
           <Link href="/">
             <Button 
               variant="outline" 
-              className="border-primary/50 hover:bg-primary/10 bg-white/20 backdrop-blur-sm"
-              style={{color: '#206b68'}}
+              className="border-primary/50 hover:bg-primary/10 bg-white/20 backdrop-blur-sm text-brand"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
               Volver al Inicio

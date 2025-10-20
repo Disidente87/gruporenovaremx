@@ -23,8 +23,7 @@ export function VenderSection() {
           <Link href="/">
             <Button 
               variant="outline" 
-              className="border-primary/50 hover:bg-primary/10 bg-white/20 backdrop-blur-sm"
-              style={{color: '#206b68'}}
+              className="border-primary/50 hover:bg-primary/10 bg-white/20 backdrop-blur-sm text-brand"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
               Volver al Inicio
@@ -42,7 +41,7 @@ export function VenderSection() {
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold text-foreground leading-tight">
                 Cuando tu casa se deteriora
                 <span className="text-primary block">y la deuda crece,</span>
-                <span className="text-secondary">hay una salida</span>
+                <span className="text-secondary text-brand">hay una salida</span>
               </h1>
               <p className="text-lg text-muted-foreground text-elegant max-w-lg mx-auto">
                 Te acompañamos con experiencia y confianza para recuperar tu paz.
@@ -62,7 +61,7 @@ export function VenderSection() {
                   const message = encodeURIComponent('Hola, quiero consultoria para vender mi casa')
                   window.open(`https://wa.me/+526643306976?text=${message}`, '_blank')
                 }}
-                className="bg-primary hover:bg-primary/90 text-white font-medium"
+                className="btn-brand font-medium"
               >
                 Quiero Vender
                 <ArrowRight className="w-5 h-5 ml-2" />
