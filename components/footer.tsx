@@ -1,5 +1,6 @@
 import { Mail, Phone, Linkedin, Twitter } from "lucide-react"
-import { FaFacebook, FaInstagram } from "react-icons/fa"
+import { FaFacebook, FaInstagram, FaFacebookF, FaFacebookSquare, FaFacebookMessenger } from "react-icons/fa"
+import { Facebook } from "lucide-react"
 import { Button } from "./ui/button"
 import { Separator } from "./ui/separator"
 import Link from "next/link"
@@ -16,96 +17,62 @@ export function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-slate-900 text-white">
+    <footer className="bg-slate-900/95 backdrop-blur-sm text-white">
       <div className="container mx-auto px-6 py-16">
         <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
           {/* Company Info */}
           <div className="space-y-6">
             <div className="flex items-center space-x-3">
               <Image
-                src="/logo-new.jpg"
+                src="/logo.svg"
                 alt="GrupoRenovareMX Logo"
-                width={200}
-                height={40}
-                className="h-30 w-auto"
+                width={400}
+                height={80}
+                className="h-12 w-auto"
                 priority
               />
+              <p className="text-slate-300 text-elegant">
+                Más que especialistas en vivienda, aliados en tu tranquilidad
+              </p>
             </div>
-            <p className="text-slate-300 text-elegant">
-               Más que especialistas en vivienda, aliados en tu tranquilidad
-            </p>
             
             {/* Social Media */}
             <div className="space-y-3">
               <h4 className="font-medium">Síguenos</h4>
               <div className="flex space-x-3">
+                {/* Facebook Logo - Con fondo oscuro */}
                 <Button 
                   size="default" 
                   variant="outline" 
-                  className="border-slate-600 text-slate-300 hover:bg-slate-700 hover:text-white p-8"
-                  onClick={() => window.open('https://www.facebook.com/cimacapitalmx/', '_blank')}
+                  className="border-slate-600 text-slate-300 bg-blue-600 hover:bg-blue-700 hover:text-white p-4"
+                  onClick={() => window.open('https://www.facebook.com/gruporenovaremx/', '_blank')}
                 >
-                  <FaFacebook className="w-14 h-14 text-blue-600" />
+                  <FaFacebookF className="w-8 h-8 text-white" />
                 </Button>
+                
+                {/* Instagram - Con fondo oscuro */}
                 <Button 
                   size="default" 
                   variant="outline" 
-                  className="border-slate-600 text-slate-300 hover:bg-slate-700 hover:text-white p-8"
-                  onClick={() => window.open('https://www.instagram.com/cimacapitalmx/', '_blank')}
+                  className="border-slate-600 text-slate-300 bg-pink-600 hover:bg-pink-700 hover:text-white p-4"
+                  onClick={() => window.open('https://www.instagram.com/gruporenovare_mx/', '_blank')}
                 >
-                  <FaInstagram className="w-14 h-14 text-pink-600" />
+                  <FaInstagram className="w-8 h-8 text-white" />
                 </Button>
-                {/* <Button size="sm" variant="outline" className="border-slate-600 text-slate-300 hover:bg-slate-700 hover:text-white">
-                  <Linkedin className="w-4 h-4" />
-                </Button>
-                <Button size="sm" variant="outline" className="border-slate-600 text-slate-300 hover:bg-slate-700 hover:text-white">
-                  <Twitter className="w-4 h-4" />
-                </Button> */}
               </div>
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Business Hours */}
           <div className="space-y-6">
-            <h4 className="text-lg font-serif font-medium">Enlaces Rápidos</h4>
-            <nav className="space-y-3">
-              <Link 
-                href="/"
-                className="block text-slate-300 hover:text-white transition-colors text-left"
-              >
-                Inicio
-              </Link>
-              <Link 
-                href="/comprar"
-                className="block text-slate-300 hover:text-white transition-colors text-left"
-              >
-                Comprar
-              </Link>
-              <Link 
-                href="/vender"
-                className="block text-slate-300 hover:text-white transition-colors text-left"
-              >
-                Vender
-              </Link>
-              {/* <Link 
-                href="/about"
-                className="block text-slate-300 hover:text-white transition-colors text-left"
-              >
-                Quiénes Somos
-              </Link>
-              <Link 
-                href="/services"
-                className="block text-slate-300 hover:text-white transition-colors text-left"
-              >
-                Servicios
-              </Link>
-              <Link 
-                href="/contact"
-                className="block text-slate-300 hover:text-white transition-colors text-left"
-              >
-                Contacto
-              </Link> */}
-            </nav>
+            <h4 className="text-lg font-serif font-medium">Horarios de Atención</h4>
+            <div className="space-y-2">
+              <div className="text-slate-300 space-y-1">
+                <div>Lunes - Viernes: 7:00 am - 6:00 pm</div>
+                <div>Sábados: 10:00 am - 5:00 pm</div>
+                <div>Domingos: Cerrado</div>
+              </div>
+            </div>
           </div>
 
           {/* Contact Info */}
@@ -134,16 +101,6 @@ export function Footer() {
                     </a>
                   </div>
                 </div>
-              </div>
-            </div>
-
-            {/* Business Hours */}
-            <div className="space-y-2">
-              <h5 className="font-medium">Horarios de Atención</h5>
-              <div className="text-sm text-slate-300 space-y-1">
-                <div>Lunes - Viernes: 7:00 am - 6:00 pm</div>
-                <div>Sábados: 10:00 am - 5:00 pm</div>
-                <div>Domingos: Cerrado</div>
               </div>
             </div>
           </div>

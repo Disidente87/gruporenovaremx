@@ -27,16 +27,13 @@ export function AboutSection() {
   ]
 
   return (
-    <section id="quienes-somos" className="py-2 bg-white mb-16">
+    <section id="quienes-somos" className="py-2 mb-16">
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Content */}
           <div className="space-y-8">
             <div className="space-y-6">
                               <div>
-                  <div className="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
-                    Quiénes Somos
-                  </div>
                   <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground leading-tight">
                     Más que especialistas en vivienda, 
                     <span className="text-primary block">aliados en tu tranquilidad</span>

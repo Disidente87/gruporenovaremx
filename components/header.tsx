@@ -32,27 +32,27 @@ export function Header() {
   }
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[rgba(231,231,231,255)] backdrop-blur-sm border-b border-amber-200">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/10 backdrop-blur-md border-b border-white/20">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center -ml-2">
             <Image
-              src="/logo_draw.png"
+              src="/logo.svg"
               alt="GrupoRenovareMX Logo"
               width={200}
               height={40}
               className="h-12 w-auto"
               priority
             />
-            <Image
+            {/* <Image
               src="/logo_texto.png"
               alt="GrupoRenovareMX Text"
               width={150}
               height={40}
               className="h-12 w-auto ml-0 scale-90 origin-left -mb-6"
               priority
-            />
+            /> */}
           </Link>
 
           {/* Desktop Navigation */}
@@ -81,12 +81,12 @@ export function Header() {
             >
               Quiénes Somos
             </button>
-            <button 
+            {/* <button 
               onClick={() => handleNavigation('/services')}
               className="text-foreground hover:text-primary transition-colors font-medium"
             >
               Servicios
-            </button>
+            </button> */}
             <Button 
               onClick={() => handleNavigation('/contact')}
               className="bg-primary hover:bg-primary/90 text-white"
@@ -107,7 +107,7 @@ export function Header() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="md:hidden mt-4 pb-4 border-t border-border pt-4">
+          <nav className="md:hidden mt-4 pb-4 border-t border-white/20 pt-4">
             <div className="flex flex-col space-y-4">
               <button 
                 onClick={() => handleNavigation('/')}
@@ -133,12 +133,12 @@ export function Header() {
               >
                 Quiénes Somos
               </button>
-              <button 
+              {/* <button 
                 onClick={() => handleNavigation('/services')}
                 className="text-left text-foreground hover:text-primary transition-colors font-medium"
               >
                 Servicios
-              </button>
+              </button> */}
               <Button 
                 onClick={() => handleNavigation('/contact')}
                 className="bg-primary hover:bg-primary/90 text-white w-fit"

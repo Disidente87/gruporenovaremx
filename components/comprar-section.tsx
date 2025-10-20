@@ -44,7 +44,8 @@ export function ComprarSection() {
           <Link href="/">
             <Button 
               variant="outline" 
-              className="border-primary text-primary hover:bg-primary/5"
+              className="border-primary/50 hover:bg-primary/10 bg-white/20 backdrop-blur-sm"
+              style={{color: '#206b68'}}
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
               Volver al Inicio
@@ -53,7 +54,7 @@ export function ComprarSection() {
         </div>
       </div>
       
-      <section id="comprar" className="min-h-screen flex items-center bg-gradient-to-br from-background to-muted/30 mb-16" ref={contentRef}>
+      <section id="comprar" className="min-h-screen flex items-center -mb-16 -mt-32" ref={contentRef}>
         <div className="container mx-auto px-6">
           <div className="text-center max-w-4xl mx-auto">
           {/* Content */}

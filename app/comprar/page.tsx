@@ -7,7 +7,7 @@ import { FloatingWhatsApp } from "@/components/floating-whatsapp"
 
 export default function ComprarPage() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen relative">
       <Header />
       <ComprarSection />
       <Footer />

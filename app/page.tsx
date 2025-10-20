@@ -7,7 +7,7 @@ import { FloatingWhatsApp } from "@/components/floating-whatsapp"
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen relative">
       <FloatingWhatsApp />
       <Header />
       <LandingSection />

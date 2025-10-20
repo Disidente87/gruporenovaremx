@@ -4,7 +4,7 @@ import { FloatingWhatsApp } from "@/components/floating-whatsapp"
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen relative">
       <Header />
       <div className="pt-6">
         <ContactSection />
