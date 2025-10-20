@@ -50,9 +50,9 @@ export function ContactSection() {
         <div className="text-center space-y-6 mb-16">
           <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground max-w-3xl mx-auto leading-tight">
             Comencemos Juntos Tu 
-            <span className="text-primary block">Próximo Proyecto</span>
+            <span className="text-brand block">Próximo Proyecto</span>
           </h2>
-          <p className="text-lg text-muted-foreground text-elegant max-w-2xl mx-auto">
+          <p className="text-lg text-foreground text-elegant max-w-2xl mx-auto">
             Estamos listos para convertir tu visión en realidad. 
             Contáctanos para una consulta gratuita y descubre cómo podemos ayudarte.
           </p>
@@ -65,7 +65,7 @@ export function ContactSection() {
               <h3 className="text-xl font-serif font-medium text-foreground">
                 Información de Contacto
               </h3>
-              <p className="text-muted-foreground text-elegant">
+              <p className="text-foreground text-elegant">
                 Estamos aquí para responder todas tus preguntas y ayudarte a dar el primer paso 
                 hacia tu próximo proyecto inmobiliario.
               </p>
@@ -77,7 +77,7 @@ export function ContactSection() {
                   <CardContent className="p-6">
                     <div className="flex items-start space-x-4">
                       <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <info.icon className="w-6 h-6 text-primary" />
+                        <info.icon className="w-6 h-6 text-brand" />
                       </div>
                       <div className="space-y-2 flex-1">
                         <h4 className="font-medium text-foreground">{info.title}</h4>
@@ -111,7 +111,7 @@ export function ContactSection() {
               <CardContent className="p-6">
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-6 h-6 text-secondary" />
+                    <CheckCircle className="w-6 h-6 text-brand" />
                     <h4 className="font-medium text-foreground">Garantía de Respuesta</h4>
                   </div>
                   <div className="space-y-2 text-sm text-muted-foreground">

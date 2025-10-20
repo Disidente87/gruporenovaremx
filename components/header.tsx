@@ -80,25 +80,25 @@ export function Header() {
           <nav className="hidden md:flex items-center space-x-8">
             <button 
               onClick={() => handleNavigation('/')}
-              className="text-foreground hover:text-primary transition-colors font-medium"
+              className="text-foreground hover:text-green-800 transition-colors font-medium"
             >
               Inicio
             </button>
             <button 
               onClick={() => handleNavigation('/comprar')}
-              className="text-foreground hover:text-primary transition-colors font-medium"
+              className="text-foreground hover:text-green-800 transition-colors font-medium"
             >
               Comprar
             </button>
             <button 
               onClick={() => handleNavigation('/vender')}
-              className="text-foreground hover:text-primary transition-colors font-medium"
+              className="text-foreground hover:text-green-800 transition-colors font-medium"
             >
               Vender
             </button>
             <button 
               onClick={() => handleNavigation('/about')}
-              className="text-foreground hover:text-primary transition-colors font-medium"
+              className="text-foreground hover:text-green-800 transition-colors font-medium"
             >
               Quiénes Somos
             </button>
@@ -132,25 +132,25 @@ export function Header() {
             <div className="flex flex-col space-y-4">
               <button 
                 onClick={() => handleNavigation('/')}
-                className="text-left text-foreground hover:text-primary transition-colors font-medium"
+                className="text-left text-foreground hover:text-brand transition-colors font-medium"
               >
                 Inicio
               </button>
               <button 
                 onClick={() => handleNavigation('/comprar')}
-                className="text-left text-foreground hover:text-primary transition-colors font-medium"
+                className="text-left text-foreground hover:text-brand transition-colors font-medium"
               >
                 Comprar
               </button>
               <button 
                 onClick={() => handleNavigation('/vender')}
-                className="text-left text-foreground hover:text-primary transition-colors font-medium"
+                className="text-left text-foreground hover:text-brand transition-colors font-medium"
               >
                 Vender
               </button>
               <button 
                 onClick={() => handleNavigation('/about')}
-                className="text-left text-foreground hover:text-primary transition-colors font-medium"
+                className="text-left text-foreground hover:text-brand transition-colors font-medium"
               >
                 Quiénes Somos
               </button>

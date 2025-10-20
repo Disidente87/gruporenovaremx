@@ -65,13 +65,13 @@ export function LandingSection() {
                   <span className="text-primary block">en una oportunidad</span>
                   <span className="text-secondary text-brand">de crecimiento</span>
                 </h1>
-              <p className="text-lg text-muted-foreground text-elegant max-w-lg mx-auto">
+              <p className="text-lg text-foreground text-elegant max-w-lg mx-auto">
                 Te ayudamos a encontrar la mejor solución para tu propiedad.
               </p>
             </div>
 
             <div className="text-center space-y-4">
-              <p className="text-lg text-muted-foreground font-medium">
+              <p className="text-lg text-foreground font-medium">
                 ¿Qué necesitas hacer hoy?
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

@@ -43,16 +43,16 @@ export function VenderSection() {
                 <span className="text-primary block">y la deuda crece,</span>
                 <span className="text-secondary text-brand">hay una salida</span>
               </h1>
-              <p className="text-lg text-muted-foreground text-elegant max-w-lg mx-auto">
+              <p className="text-lg text-foreground text-elegant max-w-lg mx-auto">
                 Te acompañamos con experiencia y confianza para recuperar tu paz.
               </p>
             </div>
 
             <div className="text-center space-y-4">
-              <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+              <p className="text-lg text-foreground max-w-4xl mx-auto leading-relaxed">
                 Sabemos lo que significa vivir con la preocupación de una deuda que no deja de crecer mientras tu casa pierde valor. Por eso, te acompañamos paso a paso con soluciones claras y humanas: remodelamos y vendemos tu vivienda para que recuperes estabilidad y paz.
               </p>
-              <p className="text-lg text-muted-foreground font-medium">
+              <p className="text-lg text-foreground font-medium">
                 Contáctanos. Consultoría Gratuita.
               </p>
               <Button 

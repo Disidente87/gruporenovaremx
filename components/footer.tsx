@@ -80,7 +80,7 @@ export function Footer() {
             <h4 className="text-lg font-serif font-medium">Contacto</h4>
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-primary flex-shrink-0" />
+                <Phone className="w-5 h-5 text-brand flex-shrink-0" />
                 <div className="text-slate-300">
                   <div>664 330 6976</div>
                   <div>665 118 1771</div>
@@ -88,7 +88,7 @@ export function Footer() {
               </div>
               
               <div className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-primary flex-shrink-0" />
+                <Mail className="w-5 h-5 text-brand flex-shrink-0" />
                 <div className="text-slate-300">
                   <div>
                     <a href="mailto:contacto@gruporenovaremx.com" className="hover:text-white transition-colors">

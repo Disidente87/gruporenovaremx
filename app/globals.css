@@ -45,7 +45,7 @@
   
   /* Grupo Renovare MX Brand Colors */
   --brand-green: #206B68;
-  --brand-green-hover: #1a5a57;
+  --brand-green-hover: #093532;
   --brand-green-light: rgba(32, 107, 104, 0.1);
 }
 
@@ -159,16 +159,17 @@ body::before {
 }
 
 .btn-back-home {
-  border-color: rgba(32, 107, 104, 0.5);
-  background-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(32, 107, 104, 0.5) !important;
+  background-color: rgba(255, 255, 255, 0.2) !important;
   backdrop-filter: blur(8px);
-  color: var(--brand-green);
+  color: var(--brand-green) !important;
   transition: all 0.2s ease;
 }
 
 .btn-back-home:hover {
-  border-color: rgba(32, 107, 104, 0.5);
-  background-color: rgba(32, 107, 104, 0.1);
+  border-color: rgba(190, 159, 19, 0.2) !important;
+  background-color: rgba(32, 107, 104, 0.8) !important;
+  color: white !important;
 }
 
 @keyframes accordion-down {

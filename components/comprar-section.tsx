@@ -62,17 +62,17 @@ export function ComprarSection() {
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold text-foreground leading-tight">
                 Encontramos la propiedad perfecta
               </h1>
-              <p className="text-lg text-muted-foreground text-elegant max-w-lg mx-auto">
+              <p className="text-lg text-foreground text-elegant max-w-lg mx-auto">
                 Contamos con inmuebles en las zonas de mayor crecimiento económico y plusvalía de Tijuana y Tecate
               </p>
             </div>
 
             <div className="text-center space-y-4">
-              <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+              <p className="text-lg text-foreground max-w-4xl mx-auto leading-relaxed">
                 Te ayudamos a encontrar la propiedad ideal que se adapte a tus necesidades y presupuesto. 
                 Nuestro equipo de expertos te guiará en todo el proceso de compra con transparencia y confianza.
               </p>
-              <p className="text-lg text-muted-foreground font-medium">
+              <p className="text-lg text-foreground font-medium">
                 Contáctanos. Consultoría Gratuita.
               </p>
               <Button 

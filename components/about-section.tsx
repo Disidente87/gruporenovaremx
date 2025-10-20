@@ -36,18 +36,18 @@ export function AboutSection() {
                               <div>
                   <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground leading-tight">
                     Más que especialistas en vivienda, 
-                    <span className="text-primary block">aliados en tu tranquilidad</span>
+                    <span className="text-brand block">aliados en tu tranquilidad</span>
                   </h2>
                 </div>
                 
                 <div className="space-y-4 text-elegant text-justify">
-                  <p className="text-muted-foreground indent-6">
+                  <p className="text-foreground indent-6">
                     Imagina que tienes una casa que alguna vez fue tu sueño, pero que hoy se deteriora mientras la deuda sigue creciendo. La preocupación no te deja dormir, y sientes que cada día es más difícil salir adelante. En Grupo Renovare MX, hemos visto estas historias muchas veces, y sabemos exactamente lo que se siente.
                   </p>
-                  <p className="text-muted-foreground indent-6">
+                  <p className="text-foreground indent-6">
                     Nuestro equipo está aquí para escucharte, comprender tu situación y acompañarte en cada paso del proceso. No solo nos encargamos de remodelar y vender tu casa: te ayudamos a transformar un problema que parecía imposible en tranquilidad y libertad. Cada decisión se toma pensando en tu bienestar y en el de tu familia, porque sabemos que tu hogar es más que un inmueble: es tu patrimonio, tu historia y tu paz.
                   </p>
-                  <p className="text-muted-foreground indent-6">
+                  <p className="text-foreground indent-6">
                     Con nosotros, no estás solo. Somos especialistas que entienden lo que estás viviendo, y trabajamos con empatía, transparencia y profesionalismo para que recuperes confianza, control y tranquilidad en tu vida. En Grupo Renovare MX, tu situación es nuestra prioridad y tu paz nuestro compromiso.
                   </p>
                 </div>
@@ -75,7 +75,7 @@ export function AboutSection() {
               <Card key={index} className="border-border hover:shadow-lg transition-shadow duration-300">
                 <CardContent className="p-6 space-y-4">
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                    <value.icon className="w-6 h-6 text-primary" />
+                    <value.icon className="w-6 h-6 text-brand" />
                   </div>
                   <div className="space-y-2">
                     <h3 className="font-serif font-medium text-foreground">{value.title}</h3>
