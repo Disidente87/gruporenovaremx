@@ -91,13 +91,8 @@ export function Footer() {
                 <Mail className="w-5 h-5 text-brand flex-shrink-0" />
                 <div className="text-slate-300">
                   <div>
-                    <a href="mailto:contacto@gruporenovaremx.com" className="hover:text-white transition-colors">
-                      contacto@gruporenovaremx.com
-                    </a>
-                  </div>
-                  <div>
-                    <a href="mailto:ventas@gruporenovaremx.com" className="hover:text-white transition-colors">
-                      ventas@gruporenovaremx.com
+                    <a href="mailto:hola@gruporenovaremx.com" className="hover:text-white transition-colors">
+                      hola@gruporenovaremx.com
                     </a>
                   </div>
                 </div>
